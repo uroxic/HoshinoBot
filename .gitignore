@@ -4,6 +4,9 @@ config.json
 hoshino/config/
 local_coolq_config/
 
+#yobot
+hoshino/modules/yobot/
+
 # Database
 db.json
 database.json
