@@ -3,7 +3,7 @@ import random
 import re
 import urllib
 import requests
-import nonebot
+import hoshino
 
 from nonebot import on_command
 from nonebot.exceptions import CQHttpError
@@ -13,8 +13,7 @@ from hoshino.typing import CQEvent
 
 from hoshino.util import FreqLimiter, DailyNumberLimiter
 
-bot = nonebot.get_bot()
-RDIR = bot.config.RES_DIR
+RDIR = os.path.expanduser(hoshino.config.RES_DIR)
 
 _max = 1
 EXCEED_NOTICE = f'惠惠今天已经使用了{_max}次爆裂魔法哦~~~明天再使用爆裂魔法吧!'
