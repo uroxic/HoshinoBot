@@ -95,6 +95,7 @@ async def cygames_voice_guess(bot, ev: CQEvent):
         if not os.path.exists(dir_path):
             os.makedirs(dir_path)
             
+'''
         file_list = os.listdir(dir_path)
         if len(file_list) < DOWNLOAD_THRESHOLD:
             count = 0
@@ -113,7 +114,8 @@ async def cygames_voice_guess(bot, ev: CQEvent):
                         else:
                             count = count+1
             await bot.send(ev, f'下载完毕，此次下载语音包{count}个，目前共{len(os.listdir(dir_path))}个')
-        
+'''
+
         file_list = os.listdir(dir_path)
         random.shuffle(file_list)
         if len(file_list) != 0:

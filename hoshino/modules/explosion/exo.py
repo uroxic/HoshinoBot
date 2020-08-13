@@ -105,61 +105,61 @@ async def exosend(bot, ev):
         if r == '1':
             uid = ev['user_id']
             _nlmt.increase(uid)
-            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵1.mp3")
+            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵1.amr")
             await bot.send(ev, f'[CQ:record,file=file:///{path}]')
             await bot.send(ev, text1)
         if r == '2':
             uid = ev['user_id']
             _nlmt.increase(uid)
-            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵2.mp3")
+            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵2.amr")
             await bot.send(ev, f'[CQ:record,file=file:///{path}]')
             await bot.send(ev, text2)
         if r == '3':
             uid = ev['user_id']
             _nlmt.increase(uid)
-            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵3.mp3")
+            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵3.amr")
             await bot.send(ev, f'[CQ:record,file=file:///{path}]')
             await bot.send(ev, text3)
         if r == '4':
             uid = ev['user_id']
             _nlmt.increase(uid)
-            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵4.mp3")
+            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵4.amr")
             await bot.send(ev, f'[CQ:record,file=file:///{path}]')
             await bot.send(ev, text4)
         if r == '5':
             uid = ev['user_id']
             _nlmt.increase(uid)
-            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵5.mp3")
+            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵5.amr")
             await bot.send(ev, f'[CQ:record,file=file:///{path}]')
             await bot.send(ev, text5)
         if r == '6':
             uid = ev['user_id']
             _nlmt.increase(uid)
-            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵6.mp3")
+            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵6.amr")
             await bot.send(ev, f'[CQ:record,file=file:///{path}]')
             await bot.send(ev, text6)    
         if r == '7':
             uid = ev['user_id']
             _nlmt.increase(uid)
-            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵7.mp3")
+            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵7.amr")
             await bot.send(ev, f'[CQ:record,file=file:///{path}]')
             await bot.send(ev, text7)
         if r == '8':
             uid = ev['user_id']
             _nlmt.increase(uid)
-            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵8.mp3")
+            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵8.amr")
             await bot.send(ev, f'[CQ:record,file=file:///{path}]')
             await bot.send(ev, text8)
         if r == '9':
             uid = ev['user_id']
             _nlmt.increase(uid)
-            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵9.mp3")
+            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵9.amr")
             await bot.send(ev, f'[CQ:record,file=file:///{path}]')
             await bot.send(ev, text9)
         if r == '10':
             uid = ev['user_id']
             _nlmt.increase(uid)
-            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵10.mp3")
+            path = os.path.join(RDIR, "explosion-voice/explosion/施法吟诵10.amr")
             await bot.send(ev, f'[CQ:record,file=file:///{path}]')
             await bot.send(ev, text10)
 #↑↑↑有文字的爆裂魔法。↑↑↑#
@@ -170,7 +170,7 @@ async def exosend(bot, ev):
 async def exexplo(bot, ev: CQEvent):
     uid = ev['user_id']
     _nlmt.reset(uid)
-    path = os.path.join(RDIR, "explosion-voice/没有拒绝的理由吧.mp3")
+    path = os.path.join(RDIR, "explosion-voice/没有拒绝的理由吧.amr")
     await bot.send(ev, f'[CQ:record,file=file:///{path}]')
     await bot.send(ev, f"谢谢你的魔力！我感觉又可以来一发了呢~")
 #↑↑↑从hoshino的氪金魔改来的补魔。去除了权限限制，是个人都能补魔。↑↑↑#
