@@ -3,6 +3,7 @@ config.py
 config.json
 hoshino/config/
 local_coolq_config/
+!hoshino/modules/priconne/gacha/config.json
 
 #yobot
 hoshino/modules/yobot/
