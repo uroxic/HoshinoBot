@@ -140,14 +140,12 @@ async def cygames_voice_guess(bot, ev: CQEvent):
                 msg_part = f'一共{len(winner_recorder.winner)}人答对，真厉害！他们是:\n' + '\n'.join(
                     [uid2card(uid, user_card_dict) for uid in winner_recorder.winner])
 
-            if sv.bot.config.USE_CQPRO:
-                dir_path = os.path.join(
-                    hoshino_res_path, 'img', 'priconne', 'unit')
-                if not os.path.exists(dir_path):
-                    os.makedirs(dir_path)
-                cqcode = '' if not c.icon.exist else c.icon.cqcode
-            else:
-                cqcode = ''
+            dir_path = os.path.join(
+                hoshino_res_path, 'img', 'priconne', 'unit')
+            if not os.path.exists(dir_path):
+                os.makedirs(dir_path)
+            cqcode = '' if not c.icon.exist else c.icon.cqcode
+
             msg = f'正确答案是: {c.name}{cqcode}\n{msg_part}'
             await bot.send(ev, msg)
             winner_recorder.turn_off()
