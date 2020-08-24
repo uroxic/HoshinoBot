@@ -40,9 +40,11 @@ def get_rank(keyword):
 def print_rank(info, new_info=None):
     if not info:
         return ''
-    info: List[query.get_rank_response] = info if isinstance(info, list) else [info]
+    info: List[query.get_rank_response] = info if isinstance(info, list) else [
+        info]
     if new_info:
-        new_info: List[query.get_rank_response] = new_info if isinstance(new_info, list) else [new_info]
+        new_info: List[query.get_rank_response] = new_info if isinstance(
+            new_info, list) else [new_info]
 
     message = []
     text = MessageSegment.text
@@ -61,12 +63,13 @@ def print_rank(info, new_info=None):
         message.append(text(f'公会: {data.clan_name}\n'))
         message.append(text(f'会长: {data.leader_name}\n'))
         message.append(text(f'UID: {data.leader_viewer_id}\n'))
-        message.append(text(f'成员: {data.member_num}\n'))
+        #message.append(text(f'成员: {data.member_num}\n'))
         message.append(text(f'分数: {format(data.damage, ",")}  {damage_ext}\n'))
         message.append(text(f'进度: {util.calc_hp(data.damage)}\n'))
         line = line_db.get('line', [])
         if line:
-            target = util.filter_list(line, lambda x: x['damage'] > data.damage)
+            target = util.filter_list(
+                line, lambda x: x['damage'] > data.damage)
             if not target:
                 target = [query.get_rank(rank=1)[0].data]
             target = target[0]
@@ -94,4 +97,5 @@ def run_init():
 
 
 run_init()
-scheduler.add_job(update_line, 'cron', minute=f"*/{config['rules']['lock_clan_line_cron_time']}")
+scheduler.add_job(update_line, 'cron',
+                  minute=f"*/{config['rules']['lock_clan_line_cron_time']}")
