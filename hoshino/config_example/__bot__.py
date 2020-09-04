@@ -46,6 +46,7 @@ MODULES_ON = {
     'hourcall',
     'hourcallyao',
     # 'hourcallyaojp',
+    'image-generate',
     # 'kancolle',
     # 'mikan',
     # 'pcrclanbattle',
