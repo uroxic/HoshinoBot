@@ -84,6 +84,8 @@ async def set_pool(bot, ev: CQEvent):
         name = 'JP'
     elif name in ('混', '混合', 'mix'):
         name = 'MIX'
+    elif name in ('水电'):
+        name = '水电'
     else:
         await bot.finish(ev, f'未知服务器地区 {POOL_NAME_TIP}', at_sender=True)
     gid = str(ev.group_id)
